@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 10rem;
+    height: 10rem;
+    object-fit: contain;
+}
+
+.card {
+    background-color: rgb(124, 114, 95);
+    text-align: center;
+    margin: 1rem;
+    border-radius: 7px;
+}
+
+.card img {
+    width: 5rem;
+    height: 5rem;
+    display: none;
+}
+
+.country-card {
+    border-radius: 7px;
+    background-color: grey;
+    text-align: center;
+    margin: 1rem;
+    color: #f2f2f2;
+}
