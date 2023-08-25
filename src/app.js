@@ -2,7 +2,7 @@
 const countryListElement = document.querySelector(".countries");
 const countryDetailsElement = document.querySelector(".card");
 
-async function fetchCountries() {
+async function getCountries() {
     try {
         const response = await fetch(
             "https://disease.sh/v3/covid-19/countries"
@@ -46,7 +46,7 @@ function showCountryDetails(data) {
 }
 
 async function displayCountry() {
-    const countries = await fetchCountries();
+    const countries = await getCountries();
     countries.forEach((country) => {
         const countryCard = createCountryCard(country);
         countryListElement.appendChild(countryCard);
