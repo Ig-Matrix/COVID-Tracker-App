@@ -22,11 +22,11 @@ function createCountryCard(country) {
    <span>${country.country}</span> <br/>
     <span>${country.continent}</span>
     `;
-    card.addEventListener("click", () => showCountryDetails(country));
+    card.addEventListener("click", () => cardDetails(country));
     return card;
 }
 
-function showCountryDetails(data) {
+function cardDetails(data) {
     countryDetailsElement.innerHTML = `
         <div class="top">
         <div class="country-card-top">
