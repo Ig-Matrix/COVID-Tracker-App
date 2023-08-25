@@ -1,5 +1,5 @@
 
-const countries = document.querySelector(".countries");
+const countryListElement = document.querySelector(".countries");
 const countryDetailsElement = document.querySelector(".card");
 
 async function getCountries() {
@@ -49,7 +49,7 @@ async function displayCountry() {
     const countries = await getCountries();
     countries.forEach((country) => {
         const countryCard = createCountryCard(country);
-        countries.appendChild(countryCard);
+        countryListElement.appendChild(countryCard);
     });
 }
 
