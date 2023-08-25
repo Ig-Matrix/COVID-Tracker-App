@@ -9,3 +9,10 @@ img {
     height: 5rem;
     object-fit: contain;
 }
+
+.card{
+    background-color: wheat;
+    text-align: center;
+    margin: 1rem;
+    border-radius: 7px;
+}
