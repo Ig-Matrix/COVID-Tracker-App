@@ -1,6 +1,6 @@
 
 const countryListElement = document.querySelector(".countries");
-const countryDetailsElement = document.querySelector(".card");
+// const countryDetailsElement = document.querySelector(".card");
 
 async function getCountries() {
     try {
@@ -22,11 +22,18 @@ function createCountryCard(country) {
    <span>${country.country}</span> <br/>
     <span>${country.continent}</span>
     `;
-    card.addEventListener("click", () => cardDetails(country));
+    const detaiks=cardDetails(country)
+    card.addEventListener("click", () => {
+        detaiks.style.display='block'
+        cardDetails(country)
+        card.append(detaiks)
+    });
     return card;
 }
 
 function cardDetails(data) {
+    const countryDetailsElement = document.createElement('div')
+    countryDetailsElement.classList.add('card')
     countryDetailsElement.innerHTML = `
         <div class="top">
         <div class="country-card-top">
@@ -43,6 +50,7 @@ function cardDetails(data) {
         </div>
     </div>
     `;
+    return countryDetailsElement;
 }
 
 async function displayCountry() {
